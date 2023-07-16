@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Sancreek&display=swap');
+.text-center {
+  text-align: center;
+}
+
+.icon-center {
+  display: flex;
+  justify-content: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+body {
+  background-color: #4b0606;
+  color: white;
+  /*text-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px darkred;*/
+  font-size: 35px;
+  font-family: 'Sancreek', cursive;
+}
+
+.img-center {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.spotlight {
+  height: 63vh;
+  border-radius: 75px;
+}
+
+.icon {
+  height: 1em;
+  color: white;
+  text-shadow: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.brand {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: 24px;
+}
+.banner {
+  font-size: 1.7em;
+}
+
+.border {
+  border: 5px solid white;
+  padding: 3px;
+  margin: 5px;
+}
+
+.pt-5 {
+  padding-top: 5px;
+}
