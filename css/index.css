@@ -53,17 +53,6 @@ button:hover {
   display: block;
 }
 
-video {
-  max-height: 80vh;
-  background: black;
-}
-
-.hidden {
-  position: absolute;
-  top: -10000px;
-  left: -10000px;
-}
-
 #hero {
   display: flex;
   gap: 20px;
@@ -87,4 +76,9 @@ video {
 .normal-font {
   font-family: var(--bs-body-font-family) !important;
   color: white;
+}
+
+.ytplayer {
+  pointer-events: none;
+  height: 80vh;
 }

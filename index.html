@@ -53,18 +53,15 @@
       <div class="container">
         <section id="hero">
           <span class="side-panel">FLAME</span>
-          <video muted preload="auto" playsinline id="video_player1">
-            <source src="videos/video (1).mp4" type="video/mp4" />
-          </video>
-          <video
-            id="video_player2"
-            muted
-            preload="auto"
-            playsinline
-            class="hidden"
-          >
-            <source src="videos/video (2).mp4" type="video/mp4" />
-          </video>
+          <iframe
+            class="ytplayer"
+            src="https://www.youtube.com/embed/nj90HBOhEMs?si=SWr2TXB12IyXc1NZ&playlist=nj90HBOhEMs&controls=0&autoplay=1&loop=1&mute=1&fs=0&showinfo=0&playsinline=1&iv_load_policy=3&origin=https%3A%2F%2Fflamecircus.com"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+
           <span class="side-panel">CIRCUS</span>
           <div
             class="container position-absolute"
@@ -92,6 +89,5 @@
       </div>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js" defer></script>
   </body>
 </html>
