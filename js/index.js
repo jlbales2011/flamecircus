@@ -12,14 +12,10 @@ videoPlayer1.play();
 
 function nextVideo() {
   var nextVideo = "";
-  if (videoIndex == 17) {
-    nextVideo = "videos/video (1).mp4";
-  } else {
-    if (videoIndex == 18) {
-      videoIndex = 1;
-    }
-    nextVideo = "videos/video (" + videoIndex + ").mov";
+  if (videoIndex == 6) {
+    videoIndex = 1;
   }
+  nextVideo = "videos/video (" + videoIndex + ").mp4";
 
   videoIndex++;
 
