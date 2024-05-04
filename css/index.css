@@ -84,7 +84,7 @@ button:hover {
 }
 @media (max-width: 576px) {
   .ytplayer {
-    height: 60vh;
+    width: 60vw;
   }
 }
 
