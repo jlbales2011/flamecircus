@@ -82,6 +82,11 @@ button:hover {
   pointer-events: none;
   height: 80vh;
 }
+@media (max-width: 576px) {
+  .ytplayer {
+    height: 60vh;
+  }
+}
 
 .vertical-text {
   writing-mode: vertical-lr;
