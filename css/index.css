@@ -82,3 +82,8 @@ button:hover {
   pointer-events: none;
   height: 80vh;
 }
+
+.vertical-text {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
