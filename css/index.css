@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Sancreek&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Akronim&family=Sancreek&display=swap");
 .text-center {
   text-align: center;
 }
@@ -13,23 +13,10 @@
 }
 
 body {
-  background-color: #000000;
-  color: white;
-  /*text-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px darkred;*/
+  background-color: #000000 !important;
+  color: white !important;
   font-size: 35px;
-  font-family: 'Sancreek', cursive;
-}
-
-.img-center {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.spotlight {
-  height: 63vh;
-  border-radius: 75px;
+  font-family: "Sancreek", cursive !important;
 }
 
 .icon {
@@ -40,56 +27,10 @@ body {
   margin-right: 5px;
 }
 
-.brand {
-  color: inherit;
-  text-decoration: inherit;
-  font-size: 25px;
-}
-.banner {
-  color: inherit;
-  text-decoration: inherit;
-  font-size: 1.9em;
-}
-
-.border {
-  border: 5px solid white;
-  padding: 3px;
-  margin: 5px;
-}
-
 .pt-5 {
   padding-top: 5px;
 }
 
-.link_button {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: solid 1px #20538d;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-  background: #4479ba;
-  color: #fff;
-  padding: 8px 12px;
-  text-decoration: none;
-}
-.toy-button {
-  color: inherit;
-  text-decoration: inherit;
-  font-size: 25px;
-  font-family: inherit;
-  border-radius: 13px;
-  border: none;
-  padding: 10px 20px;
-}
-.middle-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
 button {
   font-family: inherit;
   font-size: 1em;
@@ -99,13 +40,51 @@ button {
   color: black;
   background-color: white;
 }
+
 button:hover {
   cursor: grab;
 }
+
 .bash-widget {
-  width: 430px;
-  height: 626px;
+  width: 360px;
+  height: 80vh;
   border: 0;
   margin: 16px auto;
   display: block;
+}
+
+video {
+  max-height: 80vh;
+  background: black;
+}
+
+.hidden {
+  position: absolute;
+  top: -10000px;
+  left: -10000px;
+}
+
+#hero {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  max-height: 80vh;
+  max-width: 100vw;
+}
+
+.side-panel {
+  font-size: 32px;
+  text-align: center;
+}
+
+.book-now {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.normal-font {
+  font-family: var(--bs-body-font-family) !important;
+  color: white;
 }

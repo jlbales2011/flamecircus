@@ -1,43 +1,90 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Flame Circus</title>
     <link rel="stylesheet" href="css/index.css" />
-    <script src="https://kit.fontawesome.com/cb762b6c4d.js" crossorigin="anonymous"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/cb762b6c4d.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
   </head>
   <body>
     <div>
-      <a class="brand" href="http://flamecircus.com">Flame Circus</a>
-      <hr />
-      <div class="img-center">
-        <div>
-          <img class="spotlight" src="media/fire-spinner-2.jpg" />
-        </div>
-        <div class="middle-container">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/I2oMUJUFWGo"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+      <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/">Flame Circus</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-          </iframe>
-          <a href="https://www.thebash.com/circus-act/flame-circus">
-            <button type="button">Booking & Reservations</button>
-          </a>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="reviews.html">Reviews</a>
+              </li>
+            </ul>
+            <div class="ms-auto normal-font">
+              <a class="normal-font" href="mailto:info@flamecircus.com"
+                >info@flamecircus.com</a
+              >
+            </div>
+          </div>
         </div>
-        <div>
-          <img class="spotlight" src="media/fire-spinner-1.jpg" />
-        </div>
+      </nav>
+
+      <div class="container">
+        <section id="hero">
+          <span class="side-panel">Flame Circus</span>
+          <video muted preload="auto" id="video_player1">
+            <source src="videos/video (1).mov" type="video/mp4" />
+          </video>
+          <video id="video_player2" muted preload="auto" class="hidden">
+            <source src="videos/video (2).mov" type="video/mp4" />
+          </video>
+          <span class="side-panel">Flame Circus</span>
+          <div
+            class="container position-absolute"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          ></div>
+        </section>
       </div>
-      <div class="icon-center">
-        <a href="mailto:info@flamecircus.com"><i class="fa-regular fa-envelope fa-lg icon"></i></a>
-        <a href="https://www.instagram.com/flamecircus"><img class="icon pt-5" src="icons/instagram.png" /></a>
+
+      <!--<div class="icon-center">
+        <a href="mailto:info@flamecircus.com"
+          ><i class="fa-regular fa-envelope fa-lg icon"></i
+        ></a>
+        <a href="https://www.instagram.com/flamecircus"
+          ><img class="icon pt-5" src="icons/instagram.png"
+        /></a>
+      </div>-->
+      <div class="book-now">
+        <a
+          href="https://www.thebash.com/circus-act/flame-circus"
+          class="btn btn-light"
+          role="button"
+          >BOOK NOW</a
+        >
       </div>
-      <iframe class="bash-widget" src="https://www.thebash.com/circus-act/flame-circus/feedback?widget=1"> </iframe>
     </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js" defer></script>
   </body>
 </html>
