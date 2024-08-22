@@ -1,6 +1,12 @@
 body {
-  background-image: url("/images/sunwheel.JPG");
+  background-image: url("/images/front_page/sunwheel.JPG");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-image: url("/images/sunwheel.JPG");
+  }
 }
