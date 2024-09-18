@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- [Existing head content] -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Flame Circus</title>
@@ -31,6 +32,7 @@
         overflow: hidden;
         font-size: 18px;
         border-radius: 5px;
+        transition: background 0.3s ease; /* Smooth transition */
       }
 
       .liquid-button::before {
@@ -60,6 +62,12 @@
         100% {
           left: 100%;
         }
+      }
+
+      /* Hover Effect for Liquid Button */
+      .liquid-button:hover {
+        background: #444444; /* Lighter shade of black on hover */
+        color: #ffffff; /* Keep text color white */
       }
 
       /* Social Icons Styling */
@@ -96,4 +104,44 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav​⬤
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <!-- [Your existing navigation code] -->
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container">
+      <!-- [Your existing hero section code] -->
+    </div>
+
+    <!-- Book Now Button with Liquid Effect and Hover -->
+    <div class="book-now text-center my-4">
+      <a
+        href="https://www.thebash.com/circus-act/flame-circus"
+        class="liquid-button"
+        >BOOK NOW</a
+      >
+    </div>
+
+    <!-- Social Icons -->
+    <div class="icon-container">
+      <!-- [Your existing social icons code] -->
+    </div>
+
+    <!-- Bootstrap Carousel -->
+    <div
+      id="imageCarousel"
+      class="carousel slide mt-4 mb-4"
+      data-bs-ride="carousel"
+      data-bs-pause="false"
+      data-bs-interval="1500"
+    >
+      <!-- [Your existing carousel code] -->
+    </div>
+
+    <!-- Tidio Chat Script -->
+    <script
+      src="//code.tidio.co/kmjjuid2nrewwjeywnjt7pbdmknnktcn.js"
+      async
+    ></script>
+  </body>
+</html>
