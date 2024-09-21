@@ -31,3 +31,8 @@ h1 {
   font-family: var(--bs-body-font-family) !important;
   color: white;
 }
+
+/* Ensuring consistent font-weight for card-text elements */
+.card-text {
+  font-weight: normal; /* You can set this to 'bold' if needed */
+}
