@@ -1,200 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flame Circus</title>
-  <link rel="icon" type="image/x-icon" href="/icons/favicon.png" />
-  <link rel="stylesheet" href="css/main.css" />
-  <!-- Remove the conflicting CSS file if it's causing issues -->
-  <!-- <link rel="stylesheet" href="css/index.css" /> -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"
-  />
-  <script src="js/jquery-3.7.1.min.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://kit.fontawesome.com/cb762b6c4d.js"
-    crossorigin="anonymous"
-  ></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flame Circus</title>
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/cb762b6c4d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img
+            src="/icons/favicon.png"
+            alt="Logo"
+            width="24"
+            height="24"
+            class="d-inline-block align-text-top"
+          />Flame Circus</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <!-- Carousel CSS -->
-  <style>
-    /* Ensure the body's background and text color are consistent */
-    body {
-      margin: 0;
-      background-color: #000000;
-      color: white;
-      font-family: sans-serif;
-      padding-top: 65px; /* To account for the fixed navbar */
-    }
-
-    /* Container for the carousel */
-    .scene {
-      width: 100%;
-      max-width: 800px; /* Adjust as needed */
-      height: 500px; /* Adjust height as needed */
-      margin: 50px auto; /* Center the carousel */
-      perspective: 1000px;
-    }
-
-    .carousel {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-style: preserve-3d;
-      transform: translateZ(-288px);
-      transition: transform 1s;
-    }
-
-    .carousel__cell {
-      position: absolute;
-      width: 200px;
-      height: 300px;
-      left: calc(50% - 100px); /* Center the cells horizontally */
-      top: calc(50% - 150px); /* Center the cells vertically */
-      backface-visibility: hidden;
-    }
-
-    .carousel__cell img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    /* Buttons */
-    .carousel-options {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .carousel-button {
-      display: inline-block;
-      margin: 0 10px;
-      padding: 10px 20px;
-      background-color: #ffffff;
-      color: #000000;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      border-radius: 5px;
-    }
-
-    .carousel-button:hover {
-      background-color: #dddddd;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .scene {
-        height: 300px;
-      }
-      .carousel__cell {
-        width: 150px;
-        height: 225px;
-        left: calc(50% - 75px);
-        top: calc(50% - 112.5px);
-      }
-      .carousel {
-        transform: translateZ(-216px);
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- Navigation bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="/">
-        <img
-          src="/icons/favicon.png"
-          alt="Logo"
-          width="24"
-          height="24"
-          class="d-inline-block align-text-top"
-        />
-        Flame Circus
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/"
-              >Home <span class="sr-only">(current)</span></a
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reviews.html">Reviews</a>
+            </li>
+          </ul>
+          <div class="ms-auto normal-font">
+            <a class="normal-font" href="mailto:info@flamecircus.com"
+              >info@flamecircus.com</a
             >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="faq.html">FAQ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reviews.html">Reviews</a>
-          </li>
-        </ul>
-        <div class="ms-auto normal-font">
-          <a class="normal-font" href="mailto:info@flamecircus.com"
-            >info@flamecircus.com</a
-          >
+          </div>
         </div>
       </div>
+    </nav>
+
+    <div class="container">
+      <section id="hero">
+        <span class="side-panel vertical-text d-inline-block d-sm-none"
+          >FLAME</span
+        >
+        <span class="side-panel d-none d-sm-inline-block">FLAME</span>
+        <iframe
+          class="ytplayer"
+          src="https://www.youtube.com/embed/XwRhIZVDZWY?si=_n5cfcqSEPoEB0MC&playlist=XwRhIZVDZWY&controls=0&autoplay=1&loop=1&mute=1&fs=0&showinfo=0&playsinline=1&iv_load_policy=3&origin=https%3A%2F%2Fflamecircus.com"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <span
+          class="side-panel vertical-text d-inline-block d-sm-none"
+          style="font-size: 27px"
+          >CIRCUS</span
+        >
+        <span class="side-panel d-none d-sm-inline-block">CIRCUS</span>
+        <div
+          class="container position-absolute"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        ></div>
+      </section>
     </div>
-  </nav>
 
-  <!-- Main content -->
-  <div class="container mt-5">
-    <!-- Hero Section -->
-    <section id="hero">
-      <span class="side-panel vertical-text d-inline-block d-sm-none"
-        >FLAME</span
-      >
-      <span class="side-panel d-none d-sm-inline-block">FLAME</span>
-      <iframe
-        class="ytplayer"
-        src="https://www.youtube.com/embed/XwRhIZVDZWY?si=_n5cfcqSEPoEB0MC&playlist=XwRhIZVDZWY&controls=0&autoplay=1&loop=1&mute=1&fs=0&showinfo=0&playsinline=1&iv_load_policy=3&origin=https%3A%2F%2Fflamecircus.com"
-        title="YouTube video player"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
-      <span
-        class="side-panel vertical-text d-inline-block d-sm-none"
-        style="font-size: 27px"
-        >CIRCUS</span
-      >
-      <span class="side-panel d-none d-sm-inline-block">CIRCUS</span>
-      <div
-        class="container position-absolute"
-        data-aos="fade-up"
-        data-aos-delay="500"
-      ></div>
-    </section>
-
-    <!-- "BOOK NOW" Button -->
-    <div class="book-now text-center">
+    <!--<div class="icon-center">
+        <a href="mailto:info@flamecircus.com"
+          ><i class="fa-regular fa-envelope fa-lg icon"></i
+        ></a>
+        <a href="https://www.instagram.com/flamecircus"
+          ><img class="icon pt-5" src="icons/instagram.png"
+        /></a>
+      </div>-->
+    <div class="book-now">
       <a
         href="https://www.thebash.com/circus-act/flame-circus"
         class="btn btn-light"
@@ -202,128 +122,214 @@
         >BOOK NOW</a
       >
     </div>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Social Icons Link</title>
+        <style>
+          .icon-container {
+            text-align: center;
+            margin-top: 20px;
+          }
 
-    <!-- Social Icons -->
-    <div class="icon-container">
-      <a
-        href="https://www.instagram.com/flamecircus?igsh=ZXBxbG9mZWM5a3Vl&utm_source=qr"
-        target="_blank"
-        ><img
-          src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-          alt="Instagram"
-          class="social-icon"
-      /></a>
-      <a href="mailto:info@flamecircus.com" target="_blank"
-        ><img
-          src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-          alt="Email"
-          class="social-icon"
-      /></a>
-    </div>
+          .icon-container a {
+            margin: 0 10px;
+          }
 
-    <!-- 3D Carousel -->
-    <div class="scene">
-      <div class="carousel">
-        <div class="carousel__cell">
-          <img src="/images/front_page/jugglingHarley.jpeg" alt="Fire Juggling" />
+          .social-icon {
+            width: 50px;
+            height: auto;
+            cursor: pointer;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="icon-container">
+          <a
+            href="https://www.instagram.com/flamecircus?igsh=ZXBxbG9mZWM5a3Vl&utm_source=qr"
+            target="_blank"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+              alt="Instagram"
+              class="social-icon"
+          /></a>
+          <a href="mailto:info@flamecircus.com" target="_blank"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+              alt="Email"
+              class="social-icon"
+          /></a>
         </div>
-        <div class="carousel__cell">
-          <img src="/images/front_page/cheech.jpg" alt="Fire Fans" />
+      </body>
+    </html>
+    <div
+      id="imageCarousel"
+      class="carousel slide mt-4 mb-4"
+      data-bs-ride="carousel"
+      data-bs-pause="false"
+      daya-bs-interval="1500"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="4"
+          aria-label="Slide 5"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="5"
+          aria-label="Slide 6"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="6"
+          aria-label="Slide 7"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="7"
+          aria-label="Slide 8"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="8"
+          aria-label="Slide 9"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="9"
+          aria-label="Slide 10"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/images/front_page/jugglingHarley.jpeg"
+            class="d-block"
+            alt="Fire Juggling"
+          />
         </div>
-        <div class="carousel__cell">
-          <img src="/images/front_page/sunwheelHarley.jpeg" alt="Sunwheel" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/cheech.jpg"
+            class="d-block"
+            alt="Fire Fans"
+          />
         </div>
-        <div class="carousel__cell">
-          <img src="/images/front_page/fireBubbles.jpg" alt="Fire Bubbles" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/sunwheelHarley.jpeg"
+            class="d-block"
+            alt="Sunwheel"
+          />
         </div>
-        <div class="carousel__cell">
-          <img src="/images/front_page/cheechDragonStaff.jpg" alt="Dragon Staff" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/fireBubbles.jpg"
+            class="d-block"
+            alt="Fire Bubbles"
+          />
         </div>
-        <div class="carousel__cell">
-          <img src="/images/front_page/fireEatingHarley.jpeg" alt="Fire Eating" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/cheechDragonStaff.jpg"
+            class="d-block"
+            alt="Dragon Staff"
+          />
         </div>
-        <div class="carousel__cell">
-          <img src="/images/front_page/fireSword.jpg" alt="Fire Sword" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/fireEatingHarley.jpeg"
+            class="d-block"
+            alt="Fire Eating"
+          />
         </div>
-        <div class="carousel__cell">
-          <img src="/images/front_page/poiHarley.jpeg" alt="Fire Poi" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/fireSword.jpg"
+            class="d-block"
+            alt="Fire Sword"
+          />
         </div>
-        <div class="carousel__cell">
-          <img src="/images/front_page/sunwheel.JPG" alt="Sunwheel" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/poiHarley.jpeg"
+            class="d-block"
+            alt="Fire Poi"
+          />
         </div>
-        <div class="carousel__cell">
-          <img src="/images/front_page/devilSticks.jpg" alt="Devil Sticks" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/sunwheel.JPG"
+            class="d-block"
+            alt="sunwheel"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/devilSticks.jpg"
+            class="d-block"
+            alt="devil sticks"
+          />
         </div>
       </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#imageCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#imageCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-
-    <!-- Carousel Controls -->
-    <div class="carousel-options">
-      <button class="carousel-button previous-button">Previous</button>
-      <button class="carousel-button next-button">Next</button>
-    </div>
-
-  </div>
-
-  <!-- JavaScript for Carousel -->
-  <script>
-    (function() {
-      var carousel = document.querySelector('.carousel');
-      var cells = carousel.querySelectorAll('.carousel__cell');
-      var cellCount = cells.length; // 10
-      var selectedIndex = 0;
-      var cellWidth = 200; // as defined in CSS
-      var cellHeight = 300; // as defined in CSS
-      var radius, theta;
-
-      // Rotate the carousel to the selected index
-      function rotateCarousel() {
-        var angle = theta * selectedIndex * -1;
-        carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 'rotateY(' + angle + 'deg)';
-      }
-
-      // Update the carousel when the cell count changes
-      function setupCarousel() {
-        theta = 360 / cellCount;
-        var cellSize = cellWidth;
-        radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
-        for ( var i=0; i < cells.length; i++ ) {
-          var cell = cells[i];
-          if ( i < cellCount ) {
-            // visible cell
-            cell.style.opacity = 1;
-            var cellAngle = theta * i;
-            cell.style.transform = 'rotateY(' + cellAngle + 'deg) translateZ(' + radius + 'px)';
-          } else {
-            // hidden cell
-            cell.style.opacity = 0;
-            cell.style.transform = 'none';
-          }
-        }
-        rotateCarousel();
-      }
-
-      var prevButton = document.querySelector('.previous-button');
-      prevButton.addEventListener( 'click', function() {
-        selectedIndex--;
-        rotateCarousel();
-      });
-
-      var nextButton = document.querySelector('.next-button');
-      nextButton.addEventListener( 'click', function() {
-        selectedIndex++;
-        rotateCarousel();
-      });
-
-      setupCarousel();
-
-    })();
-  </script>
-
-  <!-- Tidio Chat Script -->
-  <script
-    src="//code.tidio.co/kmjjuid2nrewwjeywnjt7pbdmknnktcn.js"
-    async
-  ></script>
-</body>
+    <script
+      src="//code.tidio.co/kmjjuid2nrewwjeywnjt7pbdmknnktcn.js"
+      async
+    ></script>
+  </body>
 </html>
