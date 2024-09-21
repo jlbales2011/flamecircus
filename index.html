@@ -24,7 +24,108 @@
       crossorigin="anonymous"
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <style>
+      body {
+        margin: 0;
+        background: lightgray;
+        text-align: center;
+        font-family: sans-serif;
+        color: #fefefe;
+      }
+
+      .container {
+        position: relative;
+        width: 320px;
+        margin: 100px auto 0 auto;
+        perspective: 1000px;
+      }
+
+      .carousel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        animation: rotate360 60s infinite forwards linear;
+      }
+
+      .carousel__face {
+        position: absolute;
+        width: 300px;
+        height: 187px;
+        top: 20px;
+        left: 10px;
+        right: 10px;
+        background-size: cover;
+        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+        display: flex;
+      }
+
+      span {
+        margin: auto;
+        font-size: 2rem;
+      }
+
+      .carousel__face:nth-child(1) {
+        background-image: url("/images/front_page/jugglingHarley.jpeg");
+        transform: rotateY(0deg) translateZ(430px);
+      }
+
+      .carousel__face:nth-child(2) {
+        background-image: url("/images/front_page/cheech.jpg");
+        transform: rotateY(36deg) translateZ(430px);
+      }
+
+      .carousel__face:nth-child(3) {
+        background-image: url("/images/front_page/sunwheelHarley.jpeg");
+        transform: rotateY(72deg) translateZ(430px);
+      }
+
+      .carousel__face:nth-child(4) {
+        background-image: url("/images/front_page/fireBubbles.jpg");
+        transform: rotateY(108deg) translateZ(430px);
+      }
+
+      .carousel__face:nth-child(5) {
+        background-image: url("/images/front_page/cheechDragonStaff.jpg");
+        transform: rotateY(144deg) translateZ(430px);
+      }
+
+      .carousel__face:nth-child(6) {
+        background-image: url("/images/front_page/fireEatingHarley.jpeg");
+        transform: rotateY(180deg) translateZ(430px);
+      }
+
+      .carousel__face:nth-child(7) {
+        background-image: url("/images/front_page/fireSword.jpg");
+        transform: rotateY(216deg) translateZ(430px);
+      }
+
+      .carousel__face:nth-child(8) {
+        background-image: url("/images/front_page/poiHarley.jpeg");
+        transform: rotateY(252deg) translateZ(430px);
+      }
+
+      .carousel__face:nth-child(9) {
+        background-image: url("/images/front_page/sunwheel.JPG");
+        transform: rotateY(288deg) translateZ(430px);
+      }
+
+      .carousel__face:nth-child(10) {
+        background-image: url("/images/front_page/devilSticks.jpg");
+        transform: rotateY(324deg) translateZ(430px);
+      }
+
+      @keyframes rotate360 {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(-360deg);
+        }
+      }
+    </style>
   </head>
+
   <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
       <div class="container">
@@ -35,8 +136,9 @@
             width="24"
             height="24"
             class="d-inline-block align-text-top"
-          />Flame Circus</a
-        >
+          />
+          Flame Circus
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -106,14 +208,6 @@
       </section>
     </div>
 
-    <!--<div class="icon-center">
-        <a href="mailto:info@flamecircus.com"
-          ><i class="fa-regular fa-envelope fa-lg icon"></i
-        ></a>
-        <a href="https://www.instagram.com/flamecircus"
-          ><img class="icon pt-5" src="icons/instagram.png"
-        /></a>
-      </div>-->
     <div class="book-now">
       <a
         href="https://www.thebash.com/circus-act/flame-circus"
@@ -122,210 +216,21 @@
         >BOOK NOW</a
       >
     </div>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Social Icons Link</title>
-        <style>
-          .icon-container {
-            text-align: center;
-            margin-top: 20px;
-          }
 
-          .icon-container a {
-            margin: 0 10px;
-          }
-
-          .social-icon {
-            width: 50px;
-            height: auto;
-            cursor: pointer;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="icon-container">
-          <a
-            href="https://www.instagram.com/flamecircus?igsh=ZXBxbG9mZWM5a3Vl&utm_source=qr"
-            target="_blank"
-            ><img
-              src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-              alt="Instagram"
-              class="social-icon"
-          /></a>
-          <a href="mailto:info@flamecircus.com" target="_blank"
-            ><img
-              src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-              alt="Email"
-              class="social-icon"
-          /></a>
-        </div>
-      </body>
-    </html>
-    <div
-      id="imageCarousel"
-      class="carousel slide mt-4 mb-4"
-      data-bs-ride="carousel"
-      data-bs-pause="false"
-      daya-bs-interval="1500"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#imageCarousel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#imageCarousel"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#imageCarousel"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#imageCarousel"
-          data-bs-slide-to="3"
-          aria-label="Slide 4"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#imageCarousel"
-          data-bs-slide-to="4"
-          aria-label="Slide 5"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#imageCarousel"
-          data-bs-slide-to="5"
-          aria-label="Slide 6"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#imageCarousel"
-          data-bs-slide-to="6"
-          aria-label="Slide 7"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#imageCarousel"
-          data-bs-slide-to="7"
-          aria-label="Slide 8"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#imageCarousel"
-          data-bs-slide-to="8"
-          aria-label="Slide 9"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#imageCarousel"
-          data-bs-slide-to="9"
-          aria-label="Slide 10"
-        ></button>
+    <div class="container">
+      <div class="carousel">
+        <!-- Carousel images as faces -->
+        <div class="carousel__face"></div>
+        <div class="carousel__face"></div>
+        <div class="carousel__face"></div>
+        <div class="carousel__face"></div>
+        <div class="carousel__face"></div>
+        <div class="carousel__face"></div>
+        <div class="carousel__face"></div>
+        <div class="carousel__face"></div>
+        <div class="carousel__face"></div>
+        <div class="carousel__face"></div>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="/images/front_page/jugglingHarley.jpeg"
-            class="d-block"
-            alt="Fire Juggling"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="/images/front_page/cheech.jpg"
-            class="d-block"
-            alt="Fire Fans"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="/images/front_page/sunwheelHarley.jpeg"
-            class="d-block"
-            alt="Sunwheel"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="/images/front_page/fireBubbles.jpg"
-            class="d-block"
-            alt="Fire Bubbles"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="/images/front_page/cheechDragonStaff.jpg"
-            class="d-block"
-            alt="Dragon Staff"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="/images/front_page/fireEatingHarley.jpeg"
-            class="d-block"
-            alt="Fire Eating"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="/images/front_page/fireSword.jpg"
-            class="d-block"
-            alt="Fire Sword"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="/images/front_page/poiHarley.jpeg"
-            class="d-block"
-            alt="Fire Poi"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="/images/front_page/sunwheel.JPG"
-            class="d-block"
-            alt="sunwheel"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="/images/front_page/devilSticks.jpg"
-            class="d-block"
-            alt="devil sticks"
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#imageCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#imageCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
     <script
       src="//code.tidio.co/kmjjuid2nrewwjeywnjt7pbdmknnktcn.js"
