@@ -24,107 +24,6 @@
       crossorigin="anonymous"
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <style>
-      body {
-        background: #333;
-        padding: 70px 0;
-        font: 15px/20px Arial, sans-serif;
-      }
-
-      .container {
-        margin: 0 auto;
-        width: 250px;
-        height: 200px;
-        position: relative;
-        perspective: 1000px;
-      }
-
-      .carousel {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        transform-style: preserve-3d;
-        transition: transform 1s;
-      }
-
-      .item {
-        display: block;
-        position: absolute;
-        width: 250px;
-        height: 200px;
-        line-height: 200px;
-        text-align: center;
-        opacity: 0.95;
-        border-radius: 10px;
-      }
-
-      .a {
-        transform: rotateY(0deg) translateZ(250px);
-      }
-      .b {
-        transform: rotateY(36deg) translateZ(250px);
-      }
-      .c {
-        transform: rotateY(72deg) translateZ(250px);
-      }
-      .d {
-        transform: rotateY(108deg) translateZ(250px);
-      }
-      .e {
-        transform: rotateY(144deg) translateZ(250px);
-      }
-      .f {
-        transform: rotateY(180deg) translateZ(250px);
-      }
-      .g {
-        transform: rotateY(216deg) translateZ(250px);
-      }
-      .h {
-        transform: rotateY(252deg) translateZ(250px);
-      }
-      .i {
-        transform: rotateY(288deg) translateZ(250px);
-      }
-      .j {
-        transform: rotateY(324deg) translateZ(250px);
-      }
-
-      .next,
-      .prev {
-        color: #444;
-        position: absolute;
-        top: 100px;
-        padding: 1em 2em;
-        cursor: pointer;
-        background: #ccc;
-        border-radius: 5px;
-        border-top: 1px solid #fff;
-        box-shadow: 0 5px 0 #999;
-        transition: box-shadow 0.1s, top 0.1s;
-      }
-      .next:hover,
-      .prev:hover {
-        color: #000;
-      }
-      .next:active,
-      .prev:active {
-        top: 104px;
-        box-shadow: 0 1px 0 #999;
-      }
-      .next {
-        right: 5em;
-      }
-      .prev {
-        left: 5em;
-      }
-
-      .item img {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        object-fit: cover;
-      }
-    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
@@ -207,6 +106,14 @@
       </section>
     </div>
 
+    <!--<div class="icon-center">
+        <a href="mailto:info@flamecircus.com"
+          ><i class="fa-regular fa-envelope fa-lg icon"></i
+        ></a>
+        <a href="https://www.instagram.com/flamecircus"
+          ><img class="icon pt-5" src="icons/instagram.png"
+        /></a>
+      </div>-->
     <div class="book-now">
       <a
         href="https://www.thebash.com/circus-act/flame-circus"
@@ -215,72 +122,211 @@
         >BOOK NOW</a
       >
     </div>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Social Icons Link</title>
+        <style>
+          .icon-container {
+            text-align: center;
+            margin-top: 20px;
+          }
 
-    <div class="container">
-      <div class="carousel">
-        <div class="item a">
-          <img src="/images/front_page/jugglingHarley.jpeg" alt="Fire Juggling" />
+          .icon-container a {
+            margin: 0 10px;
+          }
+
+          .social-icon {
+            width: 50px;
+            height: auto;
+            cursor: pointer;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="icon-container">
+          <a
+            href="https://www.instagram.com/flamecircus?igsh=ZXBxbG9mZWM5a3Vl&utm_source=qr"
+            target="_blank"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+              alt="Instagram"
+              class="social-icon"
+          /></a>
+          <a href="mailto:info@flamecircus.com" target="_blank"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+              alt="Email"
+              class="social-icon"
+          /></a>
         </div>
-        <div class="item b">
-          <img src="/images/front_page/cheech.jpg" alt="Fire Fans" />
+      </body>
+    </html>
+    <div
+      id="imageCarousel"
+      class="carousel slide mt-4 mb-4"
+      data-bs-ride="carousel"
+      data-bs-pause="false"
+      daya-bs-interval="1500"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="4"
+          aria-label="Slide 5"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="5"
+          aria-label="Slide 6"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="6"
+          aria-label="Slide 7"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="7"
+          aria-label="Slide 8"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="8"
+          aria-label="Slide 9"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#imageCarousel"
+          data-bs-slide-to="9"
+          aria-label="Slide 10"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/images/front_page/jugglingHarley.jpeg"
+            class="d-block"
+            alt="Fire Juggling"
+          />
         </div>
-        <div class="item c">
-          <img src="/images/front_page/sunwheelHarley.jpeg" alt="Sunwheel" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/cheech.jpg"
+            class="d-block"
+            alt="Fire Fans"
+          />
         </div>
-        <div class="item d">
-          <img src="/images/front_page/fireBubbles.jpg" alt="Fire Bubbles" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/sunwheelHarley.jpeg"
+            class="d-block"
+            alt="Sunwheel"
+          />
         </div>
-        <div class="item e">
-          <img src="/images/front_page/cheechDragonStaff.jpg" alt="Dragon Staff" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/fireBubbles.jpg"
+            class="d-block"
+            alt="Fire Bubbles"
+          />
         </div>
-        <div class="item f">
-          <img src="/images/front_page/fireEatingHarley.jpeg" alt="Fire Eating" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/cheechDragonStaff.jpg"
+            class="d-block"
+            alt="Dragon Staff"
+          />
         </div>
-        <div class="item g">
-          <img src="/images/front_page/fireSword.jpg" alt="Fire Sword" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/fireEatingHarley.jpeg"
+            class="d-block"
+            alt="Fire Eating"
+          />
         </div>
-        <div class="item h">
-          <img src="/images/front_page/poiHarley.jpeg" alt="Fire Poi" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/fireSword.jpg"
+            class="d-block"
+            alt="Fire Sword"
+          />
         </div>
-        <div class="item i">
-          <img src="/images/front_page/sunwheel.JPG" alt="Sunwheel" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/poiHarley.jpeg"
+            class="d-block"
+            alt="Fire Poi"
+          />
         </div>
-        <div class="item j">
-          <img src="/images/front_page/devilSticks.jpg" alt="Devil Sticks" />
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/sunwheel.JPG"
+            class="d-block"
+            alt="sunwheel"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/images/front_page/devilSticks.jpg"
+            class="d-block"
+            alt="devil sticks"
+          />
         </div>
       </div>
-      <div class="next">Next</div>
-      <div class="prev">Prev</div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#imageCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#imageCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-
-    <script>
-      let angle = 0;
-      const carousel = document.querySelector(".carousel");
-      const nextButton = document.querySelector(".next");
-      const prevButton = document.querySelector(".prev");
-
-      // Auto slide functionality
-      const autoSlide = () => {
-        angle -= 36;
-        carousel.style.transform = `rotateY(${angle}deg)`;
-      };
-
-      let interval = setInterval(autoSlide, 1500); // Slide every 1.5 seconds
-
-      nextButton.addEventListener("click", () => {
-        clearInterval(interval);
-        angle -= 36;
-        carousel.style.transform = `rotateY(${angle}deg)`;
-        interval = setInterval(autoSlide, 1500); // Restart auto slide after click
-      });
-
-      prevButton.addEventListener("click", () => {
-        clearInterval(interval);
-        angle += 36;
-        carousel.style.transform = `rotateY(${angle}deg)`;
-        interval = setInterval(autoSlide, 1500); // Restart auto slide after click
-      });
-    </script>
     <script
       src="//code.tidio.co/kmjjuid2nrewwjeywnjt7pbdmknnktcn.js"
       async
